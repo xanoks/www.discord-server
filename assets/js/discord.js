@@ -40,8 +40,13 @@ const IS_DEV = true;
     const trimmed = input.trim();
 
     // If full URL, extract the code
-    if (trimmed.includes("discord.gg/") || trimmed.includes("discord.com/invite/")) {
-      const match = trimmed.match(/(?:discord\.gg|discord\.com\/invite)\/([a-zA-Z0-9-]+)/i);
+    if (
+      trimmed.includes("discord.gg/") ||
+      trimmed.includes("discord.com/invite/")
+    ) {
+      const match = trimmed.match(
+        /(?:discord\.gg|discord\.com\/invite)\/([a-zA-Z0-9-]+)/i,
+      );
       if (match && match[1] && DISCORD_CODE_REGEX.test(match[1])) {
         return match[1];
       }
@@ -84,7 +89,10 @@ const IS_DEV = true;
     }
 
     // Build URL securely
-    joinBtn.setAttribute("href", DISCORD_DOMAIN + encodeURIComponent(validCode));
+    joinBtn.setAttribute(
+      "href",
+      DISCORD_DOMAIN + encodeURIComponent(validCode),
+    );
     joinBtn.classList.remove("hidden");
   }
 
