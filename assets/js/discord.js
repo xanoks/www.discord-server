@@ -6,10 +6,10 @@
 // Discord invite code (null if not configured)
 // Only include the part after discord.gg/
 // Example: "xanoks" for discord.gg/xanoks
-const DISCORD_CODE = null;
+const DISCORD_CODE = "edmzKyX7";
 
 // Development mode (true = shows "coming soon" notice)
-const IS_DEV = true;
+const IS_DEV = false;
 // ========================================
 
 (function () {
